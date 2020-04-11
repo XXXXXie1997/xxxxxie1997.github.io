@@ -13,10 +13,19 @@
     
     <item>
       <title>冲冲冲冲冲</title>
-      <link>http://example.org/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <link>http://example.org/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 11 Apr 2020 08:36:26 +0800</pubDate>
       
-      <guid>http://example.org/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>http://example.org/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <description>我就是第二篇博客的内容 </description>
+    </item>
+    
+    <item>
+      <title>冲冲冲冲冲</title>
+      <link>http://example.org/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 10 Apr 2020 08:36:26 +0800</pubDate>
+      
+      <guid>http://example.org/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
       <description>我就是第一篇博客的内容 </description>
     </item>
     
