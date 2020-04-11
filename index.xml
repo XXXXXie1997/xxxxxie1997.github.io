@@ -25,42 +25,9 @@
     </item>
     
     <item>
-      <title>Day1 Part1 命令行入门</title>
-      <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Fri, 10 Apr 2020 08:36:26 +0800</pubDate>
-      
-      <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
-      <description>作为第一课相对来讲还是比较简单，不理解的东西较少。
-第一天主要学习命令行各种命令缩写，含义，以及其在bash中如何使用
-基础命令：
-pwd &amp;ndash;当前目录绝对路径
-ls &amp;ndash;当前路径内容
-ls 路径名 &amp;ndash;查看指定路径所有文件
-ls -a 路径名 &amp;ndash;指定路径全部内容（包括隐藏文件）
-cat 路径 &amp;ndash;查看指定路径全部内容
-head 路径 -n X（X为数字） &amp;ndash;查看指定路径前X行内容
-tail 路径 -n X（X为数字） &amp;ndash;查看指定路径后X行内容
-less 路径 &amp;ndash;以可滚动页面查看指定路径内容
-clear &amp;ndash;清屏
-touch 文件名 &amp;ndash;若当前目录没有该文件名文件，创建该文件，若有同名文件，更新其修改时间。
-echo XXX（任意内容） &amp;gt;文件名 &amp;ndash;若目录中没有同名文件，创建该文件，并在文件内输入XXX，若有同名文件，会以XXX覆盖同名文件内容，需要注意
-echo XXX &amp;gt;&amp;gt; 文件名 &amp;ndash;在该文件中添加XXX内容
-echo -e &amp;quot;11111/n22222&amp;quot; &amp;gt;&amp;gt; 文件名 &amp;ndash; 在文件中添加两行内容，内容为：
-“11111
-22222”
-其中，/n代表回车（换行）
-mkdir 文件夹名 &amp;ndash;在当前路径下建立新文件夹
-mkdir -p a/b/c a/d/c &amp;ndash;在当前目录下建立深层目录
-以上面指令为例：此指令含义为在当前目录下简历a目录，在b、d目录下各建立一个c目录
-cp &amp;ndash;copy即复制
-例：
-cp a.txt b.txt &amp;ndash;将a.txt中的内容复制到b.txt中</description>
-    </item>
-    
-    <item>
       <title>Day1 Part2 git本地仓库</title>
       <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Apr 2020 16:36:26 +0800</pubDate>
       
       <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
       <description>首先还是从简单的指令开始学习的，这些指令理解起来同样没什么困难，真正的困难时容易在需要使用时想不起来应该使用哪一个，所以每过一段时间一定要多复习几次，得过且过就糟糕了
@@ -91,6 +58,39 @@ git merge &amp;ndash;合并分支：
 4.修改完后删除如&amp;laquo;&amp;laquo;、====、等用于提示冲突的多于代码
 5.使用git add标记修改后的文件
 6.再次使用git status -sb查看下一个冲突文件的文件名</description>
+    </item>
+    
+    <item>
+      <title>Day1 Part1 命令行入门</title>
+      <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 10 Apr 2020 08:36:26 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <description>作为第一课相对来讲还是比较简单，不理解的东西较少。
+第一天主要学习命令行各种命令缩写，含义，以及其在bash中如何使用
+基础命令：
+pwd &amp;ndash;当前目录绝对路径
+ls &amp;ndash;当前路径内容
+ls 路径名 &amp;ndash;查看指定路径所有文件
+ls -a 路径名 &amp;ndash;指定路径全部内容（包括隐藏文件）
+cat 路径 &amp;ndash;查看指定路径全部内容
+head 路径 -n X（X为数字） &amp;ndash;查看指定路径前X行内容
+tail 路径 -n X（X为数字） &amp;ndash;查看指定路径后X行内容
+less 路径 &amp;ndash;以可滚动页面查看指定路径内容
+clear &amp;ndash;清屏
+touch 文件名 &amp;ndash;若当前目录没有该文件名文件，创建该文件，若有同名文件，更新其修改时间。
+echo XXX（任意内容） &amp;gt;文件名 &amp;ndash;若目录中没有同名文件，创建该文件，并在文件内输入XXX，若有同名文件，会以XXX覆盖同名文件内容，需要注意
+echo XXX &amp;gt;&amp;gt; 文件名 &amp;ndash;在该文件中添加XXX内容
+echo -e &amp;quot;11111/n22222&amp;quot; &amp;gt;&amp;gt; 文件名 &amp;ndash; 在文件中添加两行内容，内容为：
+“11111
+22222”
+其中，/n代表回车（换行）
+mkdir 文件夹名 &amp;ndash;在当前路径下建立新文件夹
+mkdir -p a/b/c a/d/c &amp;ndash;在当前目录下建立深层目录
+以上面指令为例：此指令含义为在当前目录下简历a目录，在b、d目录下各建立一个c目录
+cp &amp;ndash;copy即复制
+例：
+cp a.txt b.txt &amp;ndash;将a.txt中的内容复制到b.txt中</description>
     </item>
     
   </channel>
