@@ -6,27 +6,91 @@
     <description>Recent content in Posts on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 11 Apr 2020 08:36:26 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 10:21:45 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>冲冲冲冲冲</title>
-      <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Sat, 11 Apr 2020 08:36:26 +0800</pubDate>
+      <title>Day2 git远程仓库</title>
+      <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 11 Apr 2020 10:21:45 +0800</pubDate>
       
-      <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
-      <description>我就是第二篇博客的内容 </description>
+      <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <description>git远程仓库的操作 听着是不难轮到自己操作着实迷惑了很久，同时也令我警觉起来，常言道万丈高楼平地起，打基础的时候可千万不能糊弄呀 （= n=）
+将本地仓库的文件同步到远程仓库 首先到github建立新的远程仓库，得到SSH链接 切换到想要上传的目录下，在确定本地文件已提交后，运行git remote add 远程仓库名 SSH地址将本地仓库与远程仓库联系起来 运行git push -u 远程仓库名 SSH地址将本地库的当前分支上传至对应远程仓库 （如果要上传其他分支，通过git branch建立，git checkout切换至其它分支，再push）
+这个操作只有第一次需要，后续上传只需运行git push即可
+将远程仓库的文件同步到本地仓库 通过git clone 远程仓库名可以将远程仓库中的内容同步到本地仓库（所有分支）
+容易忽视的问题：对文件的所有操作都需要标记后提交才会生效（包括文件的删除和重命名等）如果没有对所有的操作进行提交，便无法push，需要注意</description>
     </item>
     
     <item>
-      <title>冲冲冲冲冲</title>
+      <title>Day1 Part1 命令行入门</title>
       <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Fri, 10 Apr 2020 08:36:26 +0800</pubDate>
       
       <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
-      <description>我就是第一篇博客的内容 </description>
+      <description>作为第一课相对来讲还是比较简单，不理解的东西较少。
+第一天主要学习命令行各种命令缩写，含义，以及其在bash中如何使用
+基础命令：
+pwd &amp;ndash;当前目录绝对路径
+ls &amp;ndash;当前路径内容
+ls 路径名 &amp;ndash;查看指定路径所有文件
+ls -a 路径名 &amp;ndash;指定路径全部内容（包括隐藏文件）
+cat 路径 &amp;ndash;查看指定路径全部内容
+head 路径 -n X（X为数字） &amp;ndash;查看指定路径前X行内容
+tail 路径 -n X（X为数字） &amp;ndash;查看指定路径后X行内容
+less 路径 &amp;ndash;以可滚动页面查看指定路径内容
+clear &amp;ndash;清屏
+touch 文件名 &amp;ndash;若当前目录没有该文件名文件，创建该文件，若有同名文件，更新其修改时间。
+echo XXX（任意内容） &amp;gt;文件名 &amp;ndash;若目录中没有同名文件，创建该文件，并在文件内输入XXX，若有同名文件，会以XXX覆盖同名文件内容，需要注意
+echo XXX &amp;gt;&amp;gt; 文件名 &amp;ndash;在该文件中添加XXX内容
+echo -e &amp;quot;11111/n22222&amp;quot; &amp;gt;&amp;gt; 文件名 &amp;ndash; 在文件中添加两行内容，内容为：
+“11111
+22222”
+其中，/n代表回车（换行）
+mkdir 文件夹名 &amp;ndash;在当前路径下建立新文件夹
+mkdir -p a/b/c a/d/c &amp;ndash;在当前目录下建立深层目录
+以上面指令为例：此指令含义为在当前目录下简历a目录，在b、d目录下各建立一个c目录
+cp &amp;ndash;copy即复制
+例：
+cp a.txt b.txt &amp;ndash;将a.txt中的内容复制到b.txt中</description>
+    </item>
+    
+    <item>
+      <title>Day1 Part2 git本地仓库</title>
+      <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <description>首先还是从简单的指令开始学习的，这些指令理解起来同样没什么困难，真正的困难时容易在需要使用时想不起来应该使用哪一个，所以每过一段时间一定要多复习几次，得过且过就糟糕了
+git init &amp;ndash;git命令的基础，初始化git，意为在初始目录下创建.git目录
+（一定注意确保当前目录是所需目录，否则小朋友会有很多问号）
+git add 路径 &amp;ndash;描述哪些路径是我所需要提交的
+（可通过建立.gitignore文件来忽视对一些文件的描述，在该文件中输入需要忽视的文件名即可，这些文件不会被提交）
+git commit -m 字符串 &amp;ndash;提交当前被描述过的文件并说明提交理由（字符串中有空格需引号括起来）
+git commit -v &amp;ndash;使用-v会在提交之前回顾文件的改动。（推荐）
+注意：一定要先描述哪些路径是需要提交的之后再提交，也就是需要先add后commit才行
+（可通过git status查看文件当前状态，当前未描述会标红，反之标绿）
+git reset --hard aaaaaa（aaaaaa为版本号，版本号没有固定长度，只需唯一即可） &amp;ndash;使用该命令可以在提交过的各个版本中左右横跳。
+可以使用git log来查看提交后的版本，用git reflog查看版本的所有变动（包括改动后的版本）
+注意：在reset --hard aaaaaa之前，一定要通过status查看当前文件描述状态，这些文件要么没有描述过，要么已经上传完成，如果是描述过但没有上传（也就是status标绿的状态）那么在reset后，这些文件将会消失
+git branch X &amp;ndash;基于当前内容创建平行分支X（X为分支名），使用branch命令可以做到针对不同需求同时开发
+git branch -d X &amp;ndash;删除X分支及其内容
+git checkout X &amp;ndash;切换至之前创建的X分支最后一次提交的状态
+若要切换回主线，只需git checkout master即可
+git branch后不加参数可以查看当前所在分支以及分支数
+git merge &amp;ndash;合并分支：
+1.通过checkout切换至想要保留的分支（一般为master）
+2.运行git merge 想要合并的分支名
+注意：如果多条分支对同一文件的同一行进行了不同的修改，会导致冲突。命令行中的conflict提示一定要看，很关键
+冲突的解决方法：
+1.使用git status -sb查看到底是哪一个或哪些文件冲突
+2.打开冲突的文件，在文件中搜索====，可以找到冲突位置
+3.在====的上下两部分中选择需要保留的代码（当然全部保留也可以）
+4.修改完后删除如&amp;laquo;&amp;laquo;、====、等用于提示冲突的多于代码
+5.使用git add标记修改后的文件
+6.再次使用git status -sb查看下一个冲突文件的文件名</description>
     </item>
     
   </channel>

@@ -29,10 +29,53 @@
 
 <div class="row-fluid navmargin">
     <div class="page-header">
-        <h1>冲冲冲冲冲 - Fri, Apr 10, 2020</h1>
+        <h1>Day1 Part1 命令行入门 - Fri, Apr 10, 2020</h1>
     </div>
     <p class="lead"></p>
-    <h1 id="我就是第一篇博客的内容">我就是第一篇博客的内容</h1>
+    <p>作为第一课相对来讲还是比较简单，不理解的东西较少。</p>
+<p>第一天主要学习命令行各种命令缩写，含义，以及其在bash中如何使用</p>
+<p>基础命令：</p>
+<p><code>pwd</code> &ndash;当前目录绝对路径</p>
+<p><code>ls</code> &ndash;当前路径内容</p>
+<p><code>ls 路径名</code> &ndash;查看指定路径所有文件</p>
+<p><code>ls -a 路径名</code> &ndash;指定路径全部内容（包括隐藏文件）</p>
+<p><code>cat 路径</code> &ndash;查看指定路径全部内容</p>
+<p><code>head 路径 -n X</code>（X为数字） &ndash;查看指定路径前X行内容</p>
+<p><code>tail 路径 -n X</code>（X为数字） &ndash;查看指定路径后X行内容</p>
+<p><code>less 路径</code> &ndash;以可滚动页面查看指定路径内容</p>
+<p><code>clear</code> &ndash;清屏</p>
+<p><code>touch 文件名</code> &ndash;若当前目录没有该文件名文件，创建该文件，若有同名文件，更新其修改时间。</p>
+<p><code>echo XXX（任意内容） &gt;文件名</code> &ndash;若目录中没有同名文件，创建该文件，并在文件内输入XXX，若有同名文件，会以XXX覆盖同名文件内容，需要注意</p>
+<p><code>echo XXX &gt;&gt; 文件名</code> &ndash;在该文件中添加XXX内容</p>
+<p><code>echo -e &quot;11111/n22222&quot; &gt;&gt; 文件名</code> &ndash; 在文件中添加两行内容，内容为：</p>
+<p>“11111</p>
+<p>22222”</p>
+<p>其中，/n代表回车（换行）</p>
+<p><code>mkdir 文件夹名</code> &ndash;在当前路径下建立新文件夹</p>
+<p><code>mkdir -p a/b/c a/d/c</code> &ndash;在当前目录下建立深层目录</p>
+<p>以上面指令为例：此指令含义为在当前目录下简历a目录，在b、d目录下各建立一个c目录</p>
+<p><code>cp</code> &ndash;copy即复制</p>
+<p>例：</p>
+<p><code>cp a.txt b.txt</code> &ndash;将a.txt中的内容复制到b.txt中</p>
+<p><code>cp -r A B</code>（A与B为目录名） &ndash;将A目录中全部内容复制到B目录中</p>
+<p><code>rm</code> &ndash;删除</p>
+<p><code>rm 文件名</code> &ndash;删除当前路径下该文件</p>
+<p><code>rm -r 目录名</code> &ndash;删除指定目录中的所有内容</p>
+<p><code>rm -rf 目录名</code> &ndash;强制删除指定目录中的所有内容（慎用）</p>
+<p><code>code 文件名</code> &ndash;用VScode打开该文件</p>
+<p><code>start 文件名</code> &ndash;用该文件当前打开方式打开文件</p>
+<p><code>mv</code> &ndash;move，即移动</p>
+<p><code>mv 文件名 路径</code> &ndash;将该文件移动到指定路径中</p>
+<p><code>mv 文件名1 文件名2</code> &ndash;将文件名1的文件重命名为文件名2</p>
+<p><strong>使用<code>&amp;&amp;</code>将多个命令连接在一起，在前一个命令完成后，会执行后一个命令。</strong></p>
+<p><strong>使用<code>;</code>链接命令时，无论前一条是否完成，都会执行后一个命令。</strong></p>
+<p><strong>将多命令链接后写入的文件便为“脚本文件”</strong></p>
+<p><strong>脚本文件使用的步骤：</strong></p>
+<p>1.创建文件，可以不加后缀名</p>
+<p>2.添加执行权限（windows不需要）</p>
+<p>3.将要执行的命令写入该文件中，保存</p>
+<p>4.命令行中运行 <code>sh 文件名</code>即可执行脚本</p>
+<p>（注：若脚本文件的路径已经添加到环境变量，则不需要sh或者./也可以运行）</p>
 
     <h4><a href="https://xxxxxie1997.github.io/">Back to Home</a></h4>
 </div>
