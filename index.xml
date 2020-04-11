@@ -13,10 +13,10 @@
     
     <item>
       <title>如何用 hugo 搭建个人博客</title>
-      <link>https://xxxxxie1997.github.io/post/%E4%BD%9C%E4%B8%9A/</link>
+      <link>https://xxxxxie1997.github.io/post/4th/</link>
       <pubDate>Sat, 11 Apr 2020 11:02:10 +0800</pubDate>
       
-      <guid>https://xxxxxie1997.github.io/post/%E4%BD%9C%E4%B8%9A/</guid>
+      <guid>https://xxxxxie1997.github.io/post/4th/</guid>
       <description>首先当然是安装hugo了^_^。安装完后运行hugo version可以检查是否成功安装
   通过运行hugo new site xxxx.github.io-creator在当前目录下建立新的hugo目录，名为xxxx.github.io-creator （xxxx为github用户名，全小写。）
   进入xxxx.github.io-creator目录，在目录中建立git库(git init)
@@ -35,11 +35,11 @@
     </item>
     
     <item>
-      <title>Day2 git远程仓库</title>
-      <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <title>git远程仓库</title>
+      <link>https://xxxxxie1997.github.io/post/3rd/</link>
       <pubDate>Sat, 11 Apr 2020 10:21:45 +0800</pubDate>
       
-      <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%89%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://xxxxxie1997.github.io/post/3rd/</guid>
       <description>git远程仓库的操作 听着是不难轮到自己操作着实迷惑了很久，同时也令我警觉起来，常言道万丈高楼平地起，打基础的时候可千万不能糊弄呀 （= n=）
 将本地仓库的文件同步到远程仓库 首先到github建立新的远程仓库，得到SSH链接 切换到想要上传的目录下，在确定本地文件已提交后，运行git remote add 远程仓库名 SSH地址将本地仓库与远程仓库联系起来 运行git push -u 远程仓库名 SSH地址将本地库的当前分支上传至对应远程仓库 （如果要上传其他分支，通过git branch建立，git checkout切换至其它分支，再push）
 这个操作只有第一次需要，后续上传只需运行git push即可
@@ -48,11 +48,11 @@
     </item>
     
     <item>
-      <title>Day1 Part2 git本地仓库</title>
-      <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <title>git本地仓库</title>
+      <link>https://xxxxxie1997.github.io/post/2nd/</link>
       <pubDate>Fri, 10 Apr 2020 16:36:26 +0800</pubDate>
       
-      <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://xxxxxie1997.github.io/post/2nd/</guid>
       <description>首先还是从简单的指令开始学习的，这些指令理解起来同样没什么困难，真正的困难时容易在需要使用时想不起来应该使用哪一个，所以每过一段时间一定要多复习几次，得过且过就糟糕了
 git init &amp;ndash;git命令的基础，初始化git，意为在初始目录下创建.git目录
 （一定注意确保当前目录是所需目录，否则小朋友会有很多问号）
@@ -84,11 +84,11 @@ git merge &amp;ndash;合并分支：
     </item>
     
     <item>
-      <title>Day1 Part1 命令行入门</title>
-      <link>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <title>命令行入门</title>
+      <link>https://xxxxxie1997.github.io/post/1st/</link>
       <pubDate>Fri, 10 Apr 2020 08:36:26 +0800</pubDate>
       
-      <guid>https://xxxxxie1997.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://xxxxxie1997.github.io/post/1st/</guid>
       <description>作为第一课相对来讲还是比较简单，不理解的东西较少。
 第一天主要学习命令行各种命令缩写，含义，以及其在bash中如何使用
 基础命令：
