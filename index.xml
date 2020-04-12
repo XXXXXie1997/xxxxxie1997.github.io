@@ -6,10 +6,21 @@
     <description>Recent content on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 11 Apr 2020 11:02:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 14:08:00 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML入门笔记1</title>
+      <link>https://xxxxxie1997.github.io/post/5th/</link>
+      <pubDate>Sun, 12 Apr 2020 14:08:00 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/5th/</guid>
+      <description>  HTML 是李爵士（Tim Berners-Lee，也是 Web 的发明者）和他的同事在 1990 年创立的超文本标记语言。
+  html 的起手式：
+  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh-CN&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;网页的标题&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; 网页的主要内容 &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 常用的章节标签：   h1~h6分别表示 1 至 6 级标题 section表示新章节 p为段落 header为网页头部 footer为网页底部 main为网页的主要内容 aside为网页的旁支内容 div将网页内容划分为几个部分  全局属性（指所有标签都能添加的属性）   class &amp;ndash;给标签赋予一个类 contenteditable &amp;ndash;添加该属性的标签可以在页面中被编辑 hidden &amp;ndash;添加该属性的标签内容会被隐藏 id &amp;ndash;给标签赋予一个 id style &amp;ndash;给标签设置样式 tabindex &amp;ndash;添加该属性的标签内容在页面中可以被 tab 选中，属性值为数字，数字越小越先被选中（0 为最后被选中） tittle &amp;ndash;属性会将完整内容显示在页面上  常用的内容标签：   ol+li &amp;ndash;有序列表，li 包裹在 ol 中，是有序列表的内容 ul+li &amp;ndash;无序列表，用法同有序 dl+dt+dd &amp;ndash;描述列表，dt 为被描述内容，dd 为该内容的描述 pre &amp;ndash; 被 pre 包裹的内容，所有的空格都将保留 code &amp;ndash;被 code 包裹的内容会使用等宽字体 hr &amp;ndash;水平分割线 br &amp;ndash;换行 a &amp;ndash;超链接 em &amp;ndash;强调语气 strong &amp;ndash;强调内容本身 quote &amp;ndash;内联引用 blockquote &amp;ndash;块引用  </description>
+    </item>
     
     <item>
       <title>如何用 hugo 搭建个人博客</title>
