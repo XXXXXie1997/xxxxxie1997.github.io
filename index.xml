@@ -6,10 +6,26 @@
     <description>Recent content on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 12 Apr 2020 14:08:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 10:29:25 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML常用标签</title>
+      <link>https://xxxxxie1997.github.io/post/6th/</link>
+      <pubDate>Mon, 13 Apr 2020 10:29:25 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/6th/</guid>
+      <description>a 标签的用法 img 标签的用法 table 标签的用法 其他感想
+  a 标签：
+a 标签为超链接，它的作用是可以跳转到外部页面或跳转至页面内部的锚点。 a 标签可加入的属性：
+   href指定连接方向，（值可为外部连接，也可为内部 id 以及邮箱、电话等）。 target通过赋予值可以决定跳转在哪里打开，默认值为_self即当前页面（_blank为空白页打开，_top在顶层页面打开，_parent在父级页面打开）。也可通过给 iframe 命名达到在 iframe 中打开的效果。 download赋予该属性的连接会被下载。   img 标签：
+img 标签用于发出一个 get 请求，向用户展示一张图片。 可加入的属性：
+   src图片路径（这个属性必须有，否则会报错）。 alt在图片加载失败后，会显示 alt 中的内容。 height 和 width决定图片的高和宽，值可以为固定像素，也可以为百分比（宽和高如果只写一个值，另一个值会根据图片原始比例自动适应，两个都写可能导致图片变形）。 （响应式：img {max-width:100%}意为最大宽度为屏幕的 100%，大小会自动适应，可用于移动端页面开发。）  table 标签：
+table 为表格标签，一般由thead tbody tfoot组成。（都不写的话内容会自动写入 tbody） 大致格式为：
+&amp;lt;thead&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头1&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头2&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头3&amp;lt;/th&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;/thead&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;竖表头1&amp;lt;/th&amp;gt; &amp;lt;td&amp;gt;值1.</description>
+    </item>
     
     <item>
       <title>HTML入门笔记1</title>
