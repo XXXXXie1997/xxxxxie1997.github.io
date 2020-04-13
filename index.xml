@@ -24,7 +24,7 @@ a 标签为超链接，它的作用是可以跳转到外部页面或跳转至页
 img 标签用于发出一个 get 请求，向用户展示一张图片。 可加入的属性：
    src图片路径（这个属性必须有，否则会报错）。 alt在图片加载失败后，会显示 alt 中的内容。 height 和 width决定图片的高和宽，值可以为固定像素，也可以为百分比（宽和高如果只写一个值，另一个值会根据图片原始比例自动适应，两个都写可能导致图片变形）。 （响应式：img {max-width:100%}意为最大宽度为屏幕的 100%，大小会自动适应，可用于移动端页面开发。）  table 标签：
 table 为表格标签，一般由thead tbody tfoot组成。（都不写的话内容会自动写入 tbody） 大致格式为：
-&amp;lt;thead&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头1&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头2&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头3&amp;lt;/th&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;/thead&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;竖表头1&amp;lt;/th&amp;gt; &amp;lt;td&amp;gt;值1.</description>
+&amp;lt;thead&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头1&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头2&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;横表头3&amp;lt;/th&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;/thead&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;竖表头1&amp;lt;/th&amp;gt; &amp;lt;td&amp;gt;值1.1&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;值1.</description>
     </item>
     
     <item>
