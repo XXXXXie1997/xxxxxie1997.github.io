@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>老咸鱼的水洼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://xxxxxie1997.github.io//favicon.ico">
+    <link rel="canonical" href="https://xxxxxie1997.github.io/">
+    
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head><body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://xxxxxie1997.github.io/">老咸鱼的水洼</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>CSS文档流 - Tue, Apr 14, 2020</h1>
+    </div>
+    <p class="lead"></p>
+    <p>**文档流（normal-flow）：**通俗的理解为页面中文档流动的方向。
+以前区分行内元素和块元素（浏览器赋予默认属性），现在都可以通过修改样式表内<code>display</code>属性达到想要的效果，基本已经不需要区分了。</p>
+<ol>
+<li>文档的流动方向：</li>
+</ol>
+<ul>
+<li><code>inline 元素</code>：从左到右，到达最右边后换行。</li>
+<li><code>block 元素</code>：从上到下，每一个都另起一行。</li>
+<li><code>inline-block 元素</code>：从左到右，但当内容不够容下标签所有内容是会换行。</li>
+</ul>
+<ol start="2">
+<li>文档在页面中的宽度：</li>
+</ol>
+<ul>
+<li><code>inline元素</code>：宽度为内部所有 inline 元素的和，该元素不能使用<code>width</code>属性指定宽度。</li>
+<li><code>block元素</code>：默认自动计算宽度，可以用<code>width</code>指定，不写默认<code>width</code>为 auto <strong>（注意：并非 100%而是 auto，若不是特殊情况，尽量不要写 100%）</strong>。</li>
+<li><code>inline-block元素</code>：结合前两者特点，默认自动根据内容计算宽度，也可以指定 width。</li>
+</ul>
+<ol start="3">
+<li>文档在页面中的高度：</li>
+</ol>
+<ul>
+<li><code>inline元素</code>的实际高度为行高。不接受<code>width</code>和<code>height</code>属性，但依然可以赋予其他属性（如内外边距）。</li>
+<li><code>block元素</code>的实际高度由内部文档流元素决定，块元素会将内部的所有文档流元素包起来，可以使用<code>height</code>指定高度。</li>
+<li><code>inline-block元素</code>和 <code>block 元素</code>基本相同，也可以通过<code>height</code>属性指定高度。</li>
+</ul>
+<ol start="4">
+<li>存在一些特殊情况，如 <code>block 元素</code>的内容高度超过了 <code>height</code> 属性赋予的高度（文档溢出&ndash;<code>overflow</code>）。</li>
+</ol>
+<ul>
+<li>默认值为<code>overflow=visiable;</code>，使得超出的内容可见（内容会从<code>block元素</code>边框溢出）。</li>
+<li><code>overflow: scroll;</code>,该值可以给块元素添加滚动条方便用户通过滚动条浏览块元素内的内容，但很难受的是不管有没有溢出都会有滚动条，很丑……</li>
+<li>所以一般使用 <code>overflow: auto;</code>会自动根据内容长短添加滚动条，这个是目前最常用的一种处理方式。</li>
+<li>也可以使用<code>overflow-x或y</code> 可以分别设置横向，纵向的溢出内容，但不是很常用因为比较麻烦。</li>
+</ul>
+
+    <h4><a href="https://xxxxxie1997.github.io/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+        &copy; 
+        
+            
+        
+        <span id="thisyear">2020</span>
+        
+    </p>
+    <p class="text-center">
+        
+        
+        
+        
+        
+    </p>
+</footer>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: null ,
+        onePass: null , 
+        speedFactor: null 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></body>
+</html>
