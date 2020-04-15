@@ -29,7 +29,7 @@
 
 <div class="row-fluid navmargin">
     <div class="page-header">
-        <h1>CSS文档流 - Tue, Apr 14, 2020</h1>
+        <h1>CSS文档流与盒模型 - Tue, Apr 14, 2020</h1>
     </div>
     <p class="lead"></p>
     <p><strong>文档流（normal-flow）</strong>：通俗的理解为页面中文档流动的方向。
@@ -67,6 +67,18 @@
 <li>所以一般使用 <code>overflow: auto;</code>会自动根据内容长短添加滚动条，这个是目前最常用的一种处理方式。</li>
 <li>也可以使用<code>overflow-x或y</code> 可以分别设置横向，纵向的溢出内容，但不是很常用因为比较麻烦。</li>
 </ul>
+<p><strong>CSS 盒模型</strong>：
+CSS 盒模型分为两种：</p>
+<ul>
+<li>内容盒 content box</li>
+<li>边框盒 border box
+可通过<code>box-sizing</code>属性设置盒模型类型。
+盒模型由<code>content</code>、<code>padding</code>、<code>border</code>、<code>margin</code>四个部分组成。
+<strong>区别</strong>：</li>
+<li>content box 的宽高为盒内部元素内容宽高总和，即宽高只包含<code>content</code>。</li>
+<li>border box 的宽高为边框的宽高，即宽高为<code>border</code>、<code>padding</code>和<code>content</code>的总和。所以在没设置边框和内边距时，两模型效果基本相同。</li>
+</ul>
+<p>关于盒模型的学问还有很多，在以后学习过程中有机会再总结吧。</p>
 
     <h4><a href="https://xxxxxie1997.github.io/">Back to Home</a></h4>
 </div>

@@ -6,19 +6,43 @@
     <description>Recent content on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 14 Apr 2020 17:01:40 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 20:30:48 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>CSS文档流</title>
+      <title>CSS常见布局1：float布局</title>
+      <link>https://xxxxxie1997.github.io/post/9th/</link>
+      <pubDate>Wed, 15 Apr 2020 20:30:48 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/9th/</guid>
+      <description>float 布局： 步骤：
+ 在子元素上添加属性float:left;和width 给添加 float 属性元素的父元素赋予clearfix类，然后再样式表中编辑如下内容：  .clearfix::after { content: &amp;#34;&amp;#34;; display: block; clear: both; } 这个 CSS 样式可以让父元素包裹住那些因为赋予float样式而脱离文档流的元素。 很关键，一定要写！ 很关键，一定要写！ 很关键，一定要写！
+ 如果图片下面多出来一部分内容如背景色，使用vertical-align:middle;即可消去多于内容（没有为什么，目前死记硬背即可。） 当 border 因为占页面空间而扰乱了布局时，可以将 border 改为outline，这样 border 就不会占据盒模型空间了。 如果要做平均分布，在内容中加入一个任意名字的新图层（标签如 div），赋予一个-margin属性，可以将空间推宽。（尚未研究明白，后续会继续学习）  前辈的经验：
+ 一行的最后一个元素不设width值或者留一些空间以备不时之需。 float 布局不需要考虑响应式，因为这个布局专为 IE 浏览器准备而手机一般没有 IE 浏览器，只有傻子采用 float 布局做手机页面。 IE6/7 存在双倍 margin 的 bug，解决方法：   针对 IE6/7 把元素的 margin 改为一半。 将元素改为 inline-box 元素（加一个display:inline-box;）  只需要给页面加上头尾（header和footer），即可满足 pc 页面需求。 float 布局需要程序猿自己计算各元素宽度，使用起来不灵活。 CSS 没有为什么。  </description>
+    </item>
+    
+    <item>
+      <title>CSS布局</title>
+      <link>https://xxxxxie1997.github.io/post/8th/</link>
+      <pubDate>Wed, 15 Apr 2020 20:11:12 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/8th/</guid>
+      <description>css 布局主要分为两种类型：
+ 固定宽度布局：一般宽度为 960、1000、1024px，一般用于 pc 页面。 不固定宽度布局：根据文档流原理自动布局，一般应用于手机页面。 （响应式布局：在 pc 上为固定宽度，在手机上则不固定。） 注意：文档流本来就是自适应，不需要加额外的样式。  布局的思路：
+ 对于老手来说，一般按从大到小设计，先确定大局，后完善每个小部分的布局。 对于新手来说，一般按从小到大设计，先完成小布局，然后将多个小布局组合成为大布局。  关于使用哪种布局，具体情况要看需求，根据所学整理出一张思维导图： 布局是前端学习过程中一个非常重要的部分，学习的时候一定要细心。</description>
+    </item>
+    
+    <item>
+      <title>CSS文档流与盒模型</title>
       <link>https://xxxxxie1997.github.io/post/7th/</link>
       <pubDate>Tue, 14 Apr 2020 17:01:40 +0800</pubDate>
       
       <guid>https://xxxxxie1997.github.io/post/7th/</guid>
       <description>文档流（normal-flow）：通俗的理解为页面中文档流动的方向。 以前区分行内元素和块元素（浏览器赋予默认属性），现在都可以通过修改样式表内display属性达到想要的效果，基本已经不需要区分了。
- 文档的流动方向：   inline 元素：从左到右，到达最右边后换行。 block 元素：从上到下，每一个都另起一行。 inline-block 元素：从左到右，但当内容不够容下标签所有内容是会换行。  文档在页面中的宽度：   inline元素：宽度为内部所有 inline 元素的和，该元素不能使用width属性指定宽度。 block元素：默认自动计算宽度，可以用width指定，不写默认width为 auto （注意：并非 100%而是 auto，若不是特殊情况，尽量不要写 100%）。 inline-block元素：结合前两者特点，默认自动根据内容计算宽度，也可以指定 width。  文档在页面中的高度：   inline元素的实际高度为行高。不接受width和height属性，但依然可以赋予其他属性（如内外边距）。 block元素的实际高度由内部文档流元素决定，块元素会将内部的所有文档流元素包起来，可以使用height指定高度。 inline-block元素和 block 元素基本相同，也可以通过height属性指定高度。  存在一些特殊情况，如 block 元素的内容高度超过了 height 属性赋予的高度（文档溢出&amp;ndash;overflow）。   默认值为overflow=visiable;，使得超出的内容可见（内容会从block元素边框溢出）。 overflow: scroll;,该值可以给块元素添加滚动条方便用户通过滚动条浏览块元素内的内容，但很难受的是不管有没有溢出都会有滚动条，很丑…… 所以一般使用 overflow: auto;会自动根据内容长短添加滚动条，这个是目前最常用的一种处理方式。 也可以使用overflow-x或y 可以分别设置横向，纵向的溢出内容，但不是很常用因为比较麻烦。  </description>
+ 文档的流动方向：   inline 元素：从左到右，到达最右边后换行。 block 元素：从上到下，每一个都另起一行。 inline-block 元素：从左到右，但当内容不够容下标签所有内容是会换行。  文档在页面中的宽度：   inline元素：宽度为内部所有 inline 元素的和，该元素不能使用width属性指定宽度。 block元素：默认自动计算宽度，可以用width指定，不写默认width为 auto （注意：并非 100%而是 auto，若不是特殊情况，尽量不要写 100%）。 inline-block元素：结合前两者特点，默认自动根据内容计算宽度，也可以指定 width。  文档在页面中的高度：   inline元素的实际高度为行高。不接受width和height属性，但依然可以赋予其他属性（如内外边距）。 block元素的实际高度由内部文档流元素决定，块元素会将内部的所有文档流元素包起来，可以使用height指定高度。 inline-block元素和 block 元素基本相同，也可以通过height属性指定高度。  存在一些特殊情况，如 block 元素的内容高度超过了 height 属性赋予的高度（文档溢出&amp;ndash;overflow）。   默认值为overflow=visiable;，使得超出的内容可见（内容会从block元素边框溢出）。 overflow: scroll;,该值可以给块元素添加滚动条方便用户通过滚动条浏览块元素内的内容，但很难受的是不管有没有溢出都会有滚动条，很丑…… 所以一般使用 overflow: auto;会自动根据内容长短添加滚动条，这个是目前最常用的一种处理方式。 也可以使用overflow-x或y 可以分别设置横向，纵向的溢出内容，但不是很常用因为比较麻烦。  CSS 盒模型： CSS 盒模型分为两种：
+ 内容盒 content box 边框盒 border box 可通过box-sizing属性设置盒模型类型。 盒模型由content、padding、border、margin四个部分组成。 区别： content box 的宽高为盒内部元素内容宽高总和，即宽高只包含content。 border box 的宽高为边框的宽高，即宽高为border、padding和content的总和。所以在没设置边框和内边距时，两模型效果基本相同。  关于盒模型的学问还有很多，在以后学习过程中有机会再总结吧。</description>
     </item>
     
     <item>
