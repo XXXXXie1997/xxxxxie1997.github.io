@@ -6,10 +6,33 @@
     <description>Recent content in Posts on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 15 Apr 2020 20:30:48 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 21:02:00 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS常用布局2：flex布局</title>
+      <link>https://xxxxxie1997.github.io/post/10th/</link>
+      <pubDate>Thu, 16 Apr 2020 21:02:00 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/10th/</guid>
+      <description>flex 布局 flex 布局的学习内容主要分为两个部分：
+容器 container： container 内为弹性流（flex-flow），与文档流（normal-flex）不同，容器内的内容为弹性盒，弹性盒在内容放不下时默认不会换行，而是将自身进行挤压。
+container 样式：
+  display:flex;：使容器占满空间后另起一行（值为 inline-flex 时不换行。）
+  flex-direction设定主轴方向：row为横向，column为纵向（若加-reverse后缀，则改为反向。）
+  flex-wrap:(no)wrap：内容放不下时（不）换行。
+  justify-content为主轴对齐方式，有如下几个值：
+   flex-start：将内容向主轴起点方向对齐。 flex-end：将内容向主轴终点方向对齐。 space-between：将剩余空间放在内容间的缝隙里。 space-around：将剩余空间放在内容的周边。 space-evenly：将剩余内容平均分配（很少用）。 center：将内容居中对齐。    align-items：次轴对齐，用法同justify-content类似，不同之处为该元素默认值为stretch：将所有内容拉伸至最长内容相同的高度。
+  align-content多行内容对齐方式，可赋予值与align-items相同，但决定的事不同高度的元素在主轴的对齐方式。
+  flex-flow：此属性为flex-direction和flex-wrap的组合。语法：flex-flow:row-reverse wrap;
+  内容 items items 样式：
+  order：给内容排序，赋予 order 元素会按 order 值从小到大排列，值一般为整数，-1 为最小（也就是排第一）。
+  flex-grow：将多余的空间按一定比例分给内容，默认值为 0（即不分配空间），值越大，分得的空间就越多。
+  flex-shrink：当没有足够的空间时，值越大的元素挤压的越明显（默认值为 1，即空间不足时等比缩小，值为 0 时不缩小）。
+  flex-basis：控制元素基准宽度（默认值为 auto，实际直接给元素 width 也是一样的）。</description>
+    </item>
     
     <item>
       <title>CSS常见布局1：float布局</title>
