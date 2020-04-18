@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-	<meta name="generator" content="Hugo 0.69.0" />
     <title>老咸鱼的水洼</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no" />
@@ -30,75 +29,47 @@
 
 <div class="row-fluid navmargin">
     <div class="page-header">
-        <h1></h1>
+        <h1>CSS布局3：grid布局 - Sat, Apr 18, 2020</h1>
     </div>
-</div>
+    <p class="lead"></p>
+    <p><strong>首先要说明：grid 布局的兼容性一般，所以这个布局虽然极其方便且灵活，但仍然不是目前主流布局，所以还是将就 flex 一把梭。</strong></p>
+<h2 id="grid-布局的特性">grid 布局的特性：</h2>
+<ul>
+<li>
+<p>grid 布局和 flex 一样主要分为容器 container 和内容 items，只需要在元素的样式中添加<code>display:grid;</code>即可使用。</p>
+</li>
+<li>
+<p>该布局不同于以往布局，该布局方式为将页面划分为多个区域，类似一个表格，所以编辑起来非常灵活。但是比较抽象，以我浅显的理解还无法做出条理清晰的总结。</p>
+</li>
+</ul>
+<p>grid 布局的相关属性：</p>
+<ul>
+<li>
+<p><code>grid-template-columns:</code>和<code>grid-template-rows:</code>可以将页面分割为一个几行几列的表格，值的单位可以使用 px/vw/%/fr 等。（fr：将剩余空间平均分为“总 fr 数”份，每个以 fr 做单位的元素分得 n 份）。</p>
+</li>
+<li>
+<p><code>grid-column(row)-start(end):N;</code>N 为一个数字，可以指定赋予该属性的元素在分割出的表格里起（止）分别为表格中的第几条线。正因为这个属性，该布局方式才如此灵活。</p>
+</li>
+</ul>
+<ul>
+<li>
+<p><code>grid-gap:</code>可以设置 grid 元素间空隙的大小。</p>
+</li>
+<li>
+<p><code>grid-template-areas:</code>
+更加奇妙且灵活的分割方式，只需要取值输入多个字符串，便能将页面分割。
+例：</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">grid</span> {
+  <span style="color:#66d9ef">grid-template-areas</span>:
+    <span style="color:#e6db74">&#34;1 2 3 4 5&#34;</span>
+    <span style="color:#e6db74">&#34;1 2 3 4 5&#34;</span>
+    <span style="color:#e6db74">&#34;1 2 3 4 5&#34;</span>;
+}
+</code></pre></div><p>便能将页面分割为三行五列的表格，选择区域&quot;1&quot;时，即选择字符串中所有带 1 的部分，即第一列,可以通过修改字符串内容，达到选择不规则形状区域的功能。</p>
 
-<div class="row-fluid">
-    <div class="span9 bs-docs-sidebar">
-        <p class="lead"></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <hr class="soften">
-        <p></p>
-        <h1>Blog posts</h1>
-        <ul>
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/11th/">2020-04-18 | CSS布局3：grid布局</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/10th/">2020-04-16 | CSS常用布局2：flex布局</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/9th/">2020-04-15 | CSS常见布局1：float布局</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/8th/">2020-04-15 | CSS布局</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/7th/">2020-04-14 | CSS文档流与盒模型</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/6th/">2020-04-13 | HTML常用标签</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/5th/">2020-04-12 | HTML入门笔记1</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/4th/">2020-04-11 | 如何用 hugo 搭建个人博客</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/3rd/">2020-04-11 | git远程仓库</a></li>
-            
-            
-            
-            <li><a href="https://xxxxxie1997.github.io/post/2nd/">2020-04-10 | git本地仓库</a></li>
-            
-            
-        </ul>
-    </div>
-
-    <div class="span3 bs-docs-sidebar">
-        <h1>Categories</h1>
-        <ul class="nav nav-list bs-docs-sidenav">
-            
-        </ul>
-        <p></p>
-        <h1>Tags</h1>
-        <ul class="nav nav-list bs-docs-sidenav">
-            
-        </ul>
-    </div>
+    <h4><a href="https://xxxxxie1997.github.io/">Back to Home</a></h4>
 </div>
 
 
