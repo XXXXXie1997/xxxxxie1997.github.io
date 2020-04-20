@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>老咸鱼的水洼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://xxxxxie1997.github.io//favicon.ico">
+    <link rel="canonical" href="https://xxxxxie1997.github.io/">
+    
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head><body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://xxxxxie1997.github.io/">老咸鱼的水洼</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>浏览器渲染及css动画相关总结 - Mon, Apr 20, 2020</h1>
+    </div>
+    <p class="lead"></p>
+    <h2 id="浏览器渲染的步骤">浏览器渲染的步骤：</h2>
+<ol>
+<li>根据 html 内容构建 HTML 树（DOM）。</li>
+<li>根据 css 内容构建 css 树（CSSOM）。</li>
+<li>将两棵树合并，得到一棵“渲染树”（render tree）。</li>
+<li>对页面进行布局（layout）：文档流、盒模型等计算大小和位置。</li>
+<li>绘制（paint）：把页面中元素的边框颜色，文字颜色，阴影等绘制出来。</li>
+<li>合成（composite）：根据层叠样式表中层叠关系展示最终页面。</li>
+</ol>
+<p>有三种更新方式：</p>
+<ol>
+<li>JS/CSS&gt;样式&gt;布局&gt;绘制&gt;合成</li>
+<li>JS/CSS&gt;样式&gt;绘制&gt;合成</li>
+<li>JS/CSS&gt;样式&gt;合成
+<em>在 CSS 动画中，每一种属性都会触发不同的更新方式，具体哪一种属性触发哪种更新方式，可以查阅<a href="https://csstriggers.com/">csstriggers</a>。</em></li>
+</ol>
+<h2 id="css-动画的两种做法">css 动画的两种做法：</h2>
+<ol>
+<li>使用 transform，一般要配合一定触发条件如 hover，有四种常用取值：</li>
+</ol>
+<ul>
+<li>位移<code>translate</code>:可以设定 xy 轴的方向，也可以设置正负值。语法：<code>translateX/Y(100px);</code></li>
+<li>缩放<code>scale</code>：语法为<code>scale(x.x);</code>x.x 为缩放倍数。</li>
+<li>旋转<code>rotate</code>：语法为<code>rotate(Xdeg)</code> X 为旋转角度，方向为顺时针。取负值为逆时针旋转。</li>
+<li>倾斜<code>skew</code>：就是倾斜。。难以言喻，试试就知道了，取值范围同 translate。</li>
+</ul>
+<ol start="2">
+<li>使用 animation：</li>
+</ol>
+<p><strong>首先</strong>，在需要做动画的元素的样式中添加<code>animation</code>，可以设置动画的各种属性，animation 的语法为:<code>animation:动画名称 时长 过渡方式 延迟 次数 方向 填充模式 是否暂停;</code></p>
+<ul>
+<li>动画名称：顾名思义随便起了叫什么都行。。</li>
+<li>时长：单位为 s 或 ms。</li>
+<li>过渡方式：取值和 translation 一样，如<code>translation</code>或<code>linear</code>。</li>
+<li>延迟：同样为 s 或 ms。</li>
+<li>方向：如果默认方向为 A&gt;B，那么：<code>reverse</code>反向进行 B&gt;A、<code>alternate</code>反复进行，由 A 开始 A&gt;B&gt;A&gt;B&gt;A、<code>alternate-reverse</code>反向的反复进行，由 B 开始 B&gt;A&gt;B&gt;A&gt;B。</li>
+<li>填充模式：取值有<code>none``forwards``backwards``both</code>等，具体使用方式还需参阅文献。</li>
+<li>是否暂停：暂时用不到。。学习 js 后再总结。</li>
+</ul>
+<p><strong>其次</strong>，添加新的样式<code>@Keyframes 动画名称</code>声明动画中的关键帧，浏览器会自动补充缺失帧。
+@keyframes 主要有两种使用方式：</p>
+<ol>
+<li>from to 声明关键帧：指定开始和结束两个关键帧。
+例：</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">xxx</span> {
+  <span style="color:#f92672">from</span> {
+    <span style="color:#960050;background-color:#1e0010">元素开始所在位置和状态</span>;
+  }
+  <span style="color:#f92672">to</span> {
+    <span style="color:#960050;background-color:#1e0010">元素最终所在位置和状态</span>;
+  }
+}
+</code></pre></div><ol start="2">
+<li>用百分数声明关键帧：用百分数声明动画进行到哪个阶段时的关键帧，比较常用。
+例：</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">xxx</span>{
+    <span style="color:#f92672">0</span><span style="color:#f92672">%</span>{
+        <span style="color:#960050;background-color:#1e0010">元素开始所在位置和状态</span>;
+    }
+    <span style="color:#f92672">n</span><span style="color:#f92672">%</span>{
+        <span style="color:#960050;background-color:#1e0010">元素在动画进行到n%时所在位置和状态</span>;
+    }
+    <span style="color:#f92672">100</span><span style="color:#f92672">%</span>{
+        <span style="color:#960050;background-color:#1e0010">元素最终所在位置和状态</span>;
+    }
+}
+</code></pre></div>
+    <h4><a href="https://xxxxxie1997.github.io/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+        &copy; 
+        
+            
+        
+        <span id="thisyear">2020</span>
+        
+    </p>
+    <p class="text-center">
+        
+        
+        
+        
+        
+    </p>
+</footer>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: null ,
+        onePass: null , 
+        speedFactor: null 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></body>
+</html>

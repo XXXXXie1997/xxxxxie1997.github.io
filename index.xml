@@ -6,10 +6,21 @@
     <description>Recent content on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 18 Apr 2020 19:21:38 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 17:33:30 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浏览器渲染及css动画相关总结</title>
+      <link>https://xxxxxie1997.github.io/post/12th/</link>
+      <pubDate>Mon, 20 Apr 2020 17:33:30 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/12th/</guid>
+      <description>浏览器渲染的步骤：  根据 html 内容构建 HTML 树（DOM）。 根据 css 内容构建 css 树（CSSOM）。 将两棵树合并，得到一棵“渲染树”（render tree）。 对页面进行布局（layout）：文档流、盒模型等计算大小和位置。 绘制（paint）：把页面中元素的边框颜色，文字颜色，阴影等绘制出来。 合成（composite）：根据层叠样式表中层叠关系展示最终页面。  有三种更新方式：
+ JS/CSS&amp;gt;样式&amp;gt;布局&amp;gt;绘制&amp;gt;合成 JS/CSS&amp;gt;样式&amp;gt;绘制&amp;gt;合成 JS/CSS&amp;gt;样式&amp;gt;合成 在 CSS 动画中，每一种属性都会触发不同的更新方式，具体哪一种属性触发哪种更新方式，可以查阅csstriggers。  css 动画的两种做法：  使用 transform，一般要配合一定触发条件如 hover，有四种常用取值：   位移translate:可以设定 xy 轴的方向，也可以设置正负值。语法：translateX/Y(100px); 缩放scale：语法为scale(x.x);x.x 为缩放倍数。 旋转rotate：语法为rotate(Xdeg) X 为旋转角度，方向为顺时针。取负值为逆时针旋转。 倾斜skew：就是倾斜。。难以言喻，试试就知道了，取值范围同 translate。  使用 animation：  首先，在需要做动画的元素的样式中添加animation，可以设置动画的各种属性，animation 的语法为:animation:动画名称 时长 过渡方式 延迟 次数 方向 填充模式 是否暂停;
+ 动画名称：顾名思义随便起了叫什么都行。。 时长：单位为 s 或 ms。 过渡方式：取值和 translation 一样，如translation或linear。 延迟：同样为 s 或 ms。 方向：如果默认方向为 A&amp;gt;B，那么：reverse反向进行 B&amp;gt;A、alternate反复进行，由 A 开始 A&amp;gt;B&amp;gt;A&amp;gt;B&amp;gt;A、alternate-reverse反向的反复进行，由 B 开始 B&amp;gt;A&amp;gt;B&amp;gt;A&amp;gt;B。 填充模式：取值有none``forwards``backwards``both等，具体使用方式还需参阅文献。 是否暂停：暂时用不到。。学习 js 后再总结。  其次，添加新的样式@Keyframes 动画名称声明动画中的关键帧，浏览器会自动补充缺失帧。 @keyframes 主要有两种使用方式：</description>
+    </item>
     
     <item>
       <title>CSS布局3：grid布局</title>
