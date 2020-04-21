@@ -26,69 +26,46 @@
         </div>
     </div>
 </nav><div id="content" class="container">
-<article class="row-fluid navmargin">
-    <header class="page-header">
-        <h1>Posts</h1>
-    </header>
-    
-    
-</article>
-<ul>
 
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>浅析 URL - Tue, Apr 21, 2020</h1>
+    </div>
+    <p class="lead"></p>
+    <p><strong>URL（Uniform Resource Locator,统一资源定位符）用于描述一个网络上的资源。</strong></p>
+<p>基本格式以百度为例：</p>
+<p>https://（协议）www.baidu.com（域名）/s?（路径）wd=hello&amp;rsv_spt=1（查询参数）#5（锚点）</p>
+<ol>
+<li>
+<p>协议：用户使用的底层协议。在 Internet 中可以使用多种协议，如 HTTP，FTP 等。</p>
+</li>
+<li>
+<p>域名：顾名思义就是网站的域名，出了使用域名外，也可以使用 IP+端口号。</p>
+</li>
+<li>
+<p>路径：域名后的最后一个“/”之后到“？”之前路径部分。</p>
+</li>
+<li>
+<p>查询参数：“？”之后到“#”之前的部分为参数。参数可以允许有多个，使用“&amp;”作为分隔符。</p>
+</li>
+<li>
+<p>锚点：从“#”开始到最后，都是锚部分。本例中的锚部分是“name”。用于显示一个页面中的不同部分。</p>
+</li>
+</ol>
+<p><strong>DNS(Domain Name System,域名系统) ，用于进行域名解析。</strong></p>
+<p>在用户输入域名后，浏览器会向 DNS 服务器询问用户输入的域名对应哪一个 IP，收到询问后服务器会回答一个 IP，这时浏览器才会对相应 IP 的 80/443 端口发送请求，请求为查看该域名的网页。</p>
+<p><em>其中，80 为 http 默认端口，443 为 https 默认端口。</em></p>
+<p><strong>IP （Internet Protocol，网际互连协议）</strong></p>
+<p>IP 地址是 IP 协议提供的一种统一的地址格式,简单来说，IP 地址是一台接入了网络的设备在网络中的唯一标识。</p>
+<p><strong>PING 命令</strong></p>
+<p>用于对指定域名（或 ip+端口）发送、接收数据包以确定本机是否能和网络中的另一个主机建立链接。</p>
+<p><strong>域名及其分类</strong></p>
+<p>域名实际上就是一串在因特网计算机上的名字字符，这串字符是唯一的，传输数据时用做定位标识。</p>
+<p>域名有很多种类，常见的域名有：com（商业性的机构或公司）、org（非盈利的组织或团体）等。</p>
 
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/13th/">2020-04-21 | 浅析 URL</a>
-    </li>
+    <h4><a href="https://xxxxxie1997.github.io/">Back to Home</a></h4>
+</div>
 
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/12th/">2020-04-20 | 浏览器渲染及css动画相关总结</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/11th/">2020-04-18 | CSS布局3：grid布局</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/10th/">2020-04-16 | CSS常用布局2：flex布局</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/9th/">2020-04-15 | CSS常见布局1：float布局</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/8th/">2020-04-15 | CSS布局</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/7th/">2020-04-14 | CSS文档流与盒模型</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/6th/">2020-04-13 | HTML常用标签</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/5th/">2020-04-12 | HTML入门笔记1</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/4th/">2020-04-11 | 如何用 hugo 搭建个人博客</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/3rd/">2020-04-11 | git远程仓库</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/2nd/">2020-04-10 | git本地仓库</a>
-    </li>
-
-    <li>
-        <a href="https://xxxxxie1997.github.io/post/1st/">2020-04-10 | 命令行入门</a>
-    </li>
-
-</ul>
 
         </div><footer class="container">
     <hr class="soften">
