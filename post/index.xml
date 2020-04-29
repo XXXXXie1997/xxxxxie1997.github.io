@@ -6,10 +6,27 @@
     <description>Recent content in Posts on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 24 Apr 2020 21:08:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 22:40:38 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS语法</title>
+      <link>https://xxxxxie1997.github.io/post/15th/</link>
+      <pubDate>Wed, 29 Apr 2020 22:40:38 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/15th/</guid>
+      <description>简述 JS 语法 表达式和语句 表达式常常作为一个调用函数的参数被用于任何需要一个值的地方，而语句主要用于改变环境，语句本身属于一个行为。
+大多数情况下空格和回车无实际意义，但唯独 return 之后不能使用回车（问就是设计缺陷 233）
+标识符规则   第一个字符可以是 Unicode 字母、“$”、以及中文。
+  之后的字符除上述三种，还可以使用数字。
+  if else 语句 语法为：if (表达式) {语句1} eles {语句2},其中，if 和 eles 之后都只有一句语句时可以省略“{}”（不建议）。
+同时还有 eles if 和 if return 写法。
+while for 语句 while 循环 语法： while (表达式) {语句}，循环执行的步骤为： =&amp;gt;判断表达式真假（T/F） =&amp;gt;表达式为 T 时，执行语句，执行完后再次判断表达式 T/F。 =&amp;gt;当表达式为 F 时，退出循环，执行后面的语句。
+for 循环 语法：for(语句1;表达式;语句2){循环体}，循环执行的步骤为： =&amp;gt;执行语句 1 =&amp;gt;判断表达式 T/F =&amp;gt;如果表达式为 T，执行循环体后执行语句 3 =&amp;gt;如果表达式为 F，直接退出循环，执行后面的语句
+break continue 的区别 break 表示退出当前所有的循环，而 continue 表示退出当前的一次循环。</description>
+    </item>
     
     <item>
       <title>JavaScript的诞生</title>
