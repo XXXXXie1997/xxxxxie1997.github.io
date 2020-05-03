@@ -6,10 +6,31 @@
     <description>Recent content on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 29 Apr 2020 22:40:38 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 17:08:33 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS对象</title>
+      <link>https://xxxxxie1997.github.io/post/16th/</link>
+      <pubDate>Sun, 03 May 2020 17:08:33 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/16th/</guid>
+      <description>JS 对象（object）的特点：
+  无序的数据集合。
+  键值对的集合。
+  声明对象的两种语法  let obj={&#39;name1&#39;:&#39;xxx&#39;,&#39;name2&#39;:&#39;xxx&#39;}   let obj=new Object({&#39;name&#39;:&#39;xxx&#39;})  如何删除对象的属性   使用delete obj.xxx或delete obj[&#39;xxx&#39;]可以删除 obj 中 xxx 属性。
+  使用obj.xxx = undefined可以删除 obj 中 xxx 的属性值，相当于赋予 xxx 属性一个空值。
+  需要注意两种用法的区别：前者为完全删除属性，后者为保留属性但属性值为空。
+如何查看对象的属性 查看自身属性：Object.key(obj)
+查看自身属性+共有属性：console.dir(obj)
+如何修改或增加对象的属性  直接赋值：    let obj={name:&#39;xxx&#39;}
+  obj.name=&#39;xxx&#39;
+  obj[&#39;name&#39;]=&#39;xxx&#39;
+  obj[&#39;na&#39;+&#39;m&#39;+&#39;e&#39;]=&#39;xxx&#39;
+  let key = &#39;name&#39;;obj[key]=&#39;xxx&#39;</description>
+    </item>
     
     <item>
       <title>JS语法</title>

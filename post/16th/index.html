@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>老咸鱼的水洼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://xxxxxie1997.github.io//favicon.ico">
+    <link rel="canonical" href="https://xxxxxie1997.github.io/">
+    
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head><body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://xxxxxie1997.github.io/">老咸鱼的水洼</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>JS对象 - Sun, May 3, 2020</h1>
+    </div>
+    <p class="lead"></p>
+    <p>JS 对象（object）的特点：</p>
+<ol>
+<li>
+<p>无序的数据集合。</p>
+</li>
+<li>
+<p>键值对的集合。</p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<h3 id="声明对象的两种语法">声明对象的两种语法</h3>
+<ul>
+<li><code>let obj={'name1':'xxx','name2':'xxx'}</code></li>
+</ul>
+<ul>
+<li><code>let obj=new Object({'name':'xxx'})</code></li>
+</ul>
+<h3 id="如何删除对象的属性">如何删除对象的属性</h3>
+<ul>
+<li>
+<p>使用<code>delete obj.xxx</code>或<code>delete obj['xxx']</code>可以删除 obj 中 xxx 属性。</p>
+</li>
+<li>
+<p>使用<code>obj.xxx = undefined</code>可以删除 obj 中 xxx 的属性值，相当于赋予 xxx 属性一个空值。</p>
+</li>
+</ul>
+<p><strong>需要注意两种用法的区别：前者为完全删除属性，后者为保留属性但属性值为空。</strong></p>
+<h3 id="如何查看对象的属性">如何查看对象的属性</h3>
+<p>查看自身属性：<code>Object.key(obj)</code></p>
+<p>查看自身属性+共有属性：<code>console.dir(obj)</code></p>
+<h3 id="如何修改或增加对象的属性">如何修改或增加对象的属性</h3>
+<ul>
+<li>直接赋值：</li>
+</ul>
+<ol>
+<li>
+<p><code>let obj={name:'xxx'}</code></p>
+</li>
+<li>
+<p><code>obj.name='xxx'</code></p>
+</li>
+<li>
+<p><code>obj['name']='xxx'</code></p>
+</li>
+<li>
+<p><code>obj['na'+'m'+'e']='xxx'</code></p>
+</li>
+<li>
+<p><code>let key = 'name';obj[key]='xxx'</code></p>
+</li>
+</ol>
+<p>以上 5 种方法中所有的&rsquo;name'都为字符串，在方法 4 中也是因为 na、m、e 都是字符串，所以可以相加。</p>
+<ul>
+<li>批量赋值：</li>
+</ul>
+<p>通过<code>Object.assign (obj.{name1:xxx,name2=xxx})</code>，可以直接给 obj 中添加 name1 和 name2 属性，值为 xxx。</p>
+<!-- raw HTML omitted -->
+<h3 id="name-in-obj-和-objhasownpropertyname-的区别">&lsquo;name&rsquo; in obj 和 obj.hasOwnProperty(&lsquo;name&rsquo;) 的区别</h3>
+<p><code>'xxx' in obj</code>在查看 xxx 是否为 obj 的属性时，不会区分该属性是否为共有属性。</p>
+<p><code>obj.hasOwnProperty('xxx')</code>可以查看 xxx 是自身的属性还是共有属性，返回 true 时为自身属性，false 为共有。</p>
+<h3 id="其他细节">其他细节</h3>
+<ul>
+<li>
+<p>键名是字符串，并非标识符，字符串可以包括任意字符。</p>
+</li>
+<li>
+<p>写键名时，引号是可以省略的，但省略后只能写标识符，必须按照标识符规范输入。</p>
+</li>
+<li>
+<p>就算引号被省略，按照标识符规范输入，它也依然是字符串。</p>
+</li>
+</ul>
+
+    <h4><a href="https://xxxxxie1997.github.io/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+        &copy; 
+        
+            
+        
+        <span id="thisyear">2020</span>
+        
+    </p>
+    <p class="text-center">
+        
+        
+        
+        
+        
+    </p>
+</footer>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: null ,
+        onePass: null , 
+        speedFactor: null 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></body>
+</html>
