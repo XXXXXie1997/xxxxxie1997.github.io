@@ -6,10 +6,25 @@
     <description>Recent content on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 03 May 2020 17:08:33 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2020 10:36:05 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS 函数的执行时机</title>
+      <link>https://xxxxxie1997.github.io/post/17th/</link>
+      <pubDate>Sun, 10 May 2020 10:36:05 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/17th/</guid>
+      <description>在开发过程中，JS 函数的不同执行时机，会直接影响到函数的输出结果。
+先举几个简单的例子吧：
+例 1 let a = 1 function fn(){ console.log(a) } 这段代码中，无法打印出 1 ，因为根本就没有调用函数的代码。
+例 2 let a = 1 function fn(){ console.log(a) } fn() 通过 fn()调用了函数，所以执行console.log(a)，打印出 a 的值：1。
+例 3 let a = 1 function fn(){ console.log(a) } a = 2 fn() 这段代码中在调用函数前赋予了 a 一个新的值：2，所以执行后会打印出 2。
+例 4 let a = 1 function fn(){ console.log(a) } fn() a = 2 这段代码在调用函数之后才赋予了 a 一个新的值：2，所以执行后还是打印出调用函数时 a 的值：1。
+（一定要注意不能陷入固定的思路中，并非let a = 1后 a 的值就一定是 1 ，它只是声明了一个 a 而已，a 的具体取值要看 a 被赋予了什么值以及函数的执行时机才行）</description>
+    </item>
     
     <item>
       <title>JS对象</title>
