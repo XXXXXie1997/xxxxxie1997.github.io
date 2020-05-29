@@ -6,10 +6,48 @@
     <description>Recent content in Posts on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 10 May 2020 10:36:05 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2020 19:54:22 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>jQuery的设计思路</title>
+      <link>https://xxxxxie1997.github.io/post/19th/</link>
+      <pubDate>Fri, 29 May 2020 19:54:22 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/19th/</guid>
+      <description>通过时间不短的学习，对于 jQuery 的设计思路有了一定的理解，不得不说作为寿命最长的 js 函数库，jQuery 更方便学习者入门，但想要掌握 jQuery 属实不轻松。
+学习各种函数库的过程，不仅仅是学习函数的使用方法那么简单，真正能够提升自己的东西，实际是这些函数库的作者在设计它们的时候的思路，于是我尝试按照以下顺序，将这些函数的思路和步骤做一次总结：
+  获取元素
+  创建元素
+  移动元素
+  修改元素属性
+  链式操作怎样实现
+  获取元素 获取元素是 jQuery 的基本设计思想，实际就是选择某一个或多个网页元素，然后对元素进行操作。
+何以使用 CSS 选择器的表达式来选择元素：$(&#39;#id&#39;)和$&#39;div.class&#39;)等。
+也有 jQuery 所特有的表达式：$(&#39;a:first&#39;) 和$(&#39;tr:odd&#39;)等。（可以查阅阮一峰&amp;ndash;《jQuery 设计思想》）
+创建元素 jQuery 中，创建元素的方法较为简单，只需要将新元素传入 jQuery 构造函数即可。
+例：
+$(&amp;#39;&amp;lt;p&amp;gt;Hello&amp;lt;/p&amp;gt;&amp;#39;); $(&amp;#39;&amp;lt;li class=&amp;#34;new&amp;#34;&amp;gt;new list item&amp;lt;/li&amp;gt;&amp;#39;); $(&amp;#39;ul&amp;#39;).append(&amp;#39;&amp;lt;li&amp;gt;list item&amp;lt;/li&amp;gt;&amp;#39;); 。。。。。。就这么简单。
+移动元素 jQuery 中，可以通过两种方法来移动网页中元素的位置，一种为直接移动该元素至目标位置，另一种为移动其他元素使该元素达到目标位置。
+例如：
+$(&amp;#39;div&amp;#39;).insertAfter($(&amp;#39;p&amp;#39;)); //将div元素移动到p元素后面 $(&amp;#39;p&amp;#39;).after($(&amp;#39;div&amp;#39;)); //将p元素移动到div元素前面 从效果上来说两种方法是相同的，不同点在于操作结束后返回的元素不同，前者返回 div，后者返回 p，根据需求选择方法即可。
+修改元素属性 使用 jQuery 修改元素属性，实际就是使用 js 中 setAttribute()和 getAttribute()的简化，使用方式有四种：</description>
+    </item>
+    
+    <item>
+      <title>JS 算法入门：排序算法</title>
+      <link>https://xxxxxie1997.github.io/post/18th/</link>
+      <pubDate>Fri, 22 May 2020 19:51:40 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/18th/</guid>
+      <description>好长时间没更新博客了。。自从学了 js 之后，效率一天不如一天，之前学 css 的时候废寝忘食，现在连保持注意力集中都变得困难起来了，主要原因是我本来对 css 兴趣更多一些，作为小白，我对花里胡哨的样式很感兴趣，但到了 js，突然出现的大量的理论知识、算法和抽象概念让我感到无所适从。。。有点难受。
+对我来说学习 js 确实有些困难，但目前来说 js 毕竟还是前端的基础，是找工作的刚需，于是我决定将上课听到的内容尽可能详细的记录在博客中，即便忘记也有迹可循，给自己加个油，我对前端很感兴趣，我也希望能够学以致用，成功的转行。
+排序算法 通过学习了解到，各式各样的复杂算法本质都是通过大量的简单逻辑组合而成，所以越是基础的东西越要记得牢靠才行。。。
+列举了几种算法：
+ 选择排序 原理：声明一个用于获取数组中最小值索引的函数 minIndex 和用于交换数组中两个数字位置的函数 swap 来达到第 i 次获取最小值索引后与第 i 项换位的效果从而实现排序。  let swap = (array, i , j) =&amp;gt;{ let k = array[i] array[i] = array[j] array[j] = k } let minIndex = numbers =&amp;gt;{ let index = 0 for(let i = 1;i &amp;lt; numbers.length; i++){ if(numbers[i] &amp;lt; numbers[index]){ index = i } } return index } let sort = numbers =&amp;gt;{ for(let i = 0 ; i &amp;lt; numbers.</description>
+    </item>
     
     <item>
       <title>JS 函数的执行时机</title>
