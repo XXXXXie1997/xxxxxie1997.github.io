@@ -6,10 +6,24 @@
     <description>Recent content in Posts on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 31 May 2020 11:02:41 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2020 22:07:26 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一点小成果</title>
+      <link>https://xxxxxie1997.github.io/post/21th/</link>
+      <pubDate>Mon, 01 Jun 2020 22:07:26 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/21th/</guid>
+      <description>码了十个小时，写了无数 bug，感觉很简单的第一个小项目是千呼万唤始出来啊。。。
+预览建议使用 gitee 的链接。
+因为 github 有时候载入图片很慢，所以我贴了一份到 gitee 上。。。国内的代码托管应该快不少吧。
+ 预览链接（github）
+ 预览链接（gitee）
+ 源码在这里</description>
+    </item>
     
     <item>
       <title>DOM事件和事件委托</title>
