@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>老咸鱼的水洼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000084" />
+    <link rel="icon" href="https://xxxxxie1997.github.io//favicon.ico">
+    <link rel="canonical" href="https://xxxxxie1997.github.io/">
+    
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head><body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https://xxxxxie1997.github.io/">老咸鱼的水洼</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav><div id="content" class="container">
+
+<div class="row-fluid navmargin">
+    <div class="page-header">
+        <h1>期中总结 - Tue, Jun 30, 2020</h1>
+    </div>
+    <p class="lead"></p>
+    <h3 id="什么是闭包用途是缺点是">什么是闭包？用途是？缺点是？</h3>
+<p>一个函数在它的作用域之外被引用，就相当于创建了这个函数的闭包,例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">func1</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">funcName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxx&#34;</span>;
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">func2</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">funcName</span>);
+  }
+  <span style="color:#a6e22e">func2</span>();
+}
+<span style="color:#a6e22e">func1</span>();
+</code></pre></div><p>上述代码中，funcName 是由 func1 函数创建的局部变量，func2 使用了父函数 func1 声明的变量，func2 就是一个闭包。
+用途：可以将变量保存在内存中，因为闭包函数执行完后不会被回收。可以实现公有变量以及实现封装
+缺点：费内存，滥用会导致网页的性能问题</p>
+<h3 id="callapplybind-的用法">call,apply,bind 的用法？</h3>
+<p>call：使用一个指定的 this 值和单独给出的参数（一个或多个）来调用一个函数。
+apply：用法和 call 类似，但 apply 接受的是包含多个参数的数组。
+bind：使用 bind 方法可以创建一个新的函数，bind 被调用时，这个新创建函数的 this 会被指定为 bind 的第一个参数，然后其余参数会作为新创建函数的参数供调用时使用</p>
+<h3 id="列举至少-10-个-http-状态码描述意义">列举至少 10 个 http 状态码，描述意义</h3>
+<p>100：continue 继续：这个临时响应用于通知客户端它的部分请求已经被服务器接收且未被拒绝，客户端应该继续发送请求的剩余部分
+200：OK 成功，意义根据请求使用的方法不同而不同
+201：created 已创建,通常为 put 方法得到的响应码
+202：accepted 已创建，表示服务器接受请求但尚未处理
+204：no content 无内容，该响应没有响应内容只有响应头。
+205：reset content 重置内容，告诉用户代理去重置发送该请求窗口的文档视图
+206：partial content 部分内容，客户端通过使用 range 头字段进行文件分段下载时使用的状态码
+300：multiple choice 多种选择，一个请求有多重可能的响应，用户必须选择它们中的一个，服务器没有标准可以遵循以代替用户做出选择
+301：moved permanently 永久移动，表示请求的 url 资源路径已经永久改变，新的 url 可以再响应的 location 头字段里找到
+302：found 临时移动，表示请求的 url 资源路径临时改标并且还可能继续改变，因此客户端在以后方位还得继续使用这个 url，新的 url 可以再响应的 location 头字段里找到
+400：bad request 错误请求，发送请求语法错误，服务器无法正常读取。
+401：unauthorized 未授权，需要身份验证后才能获取请求内容。只需正确的账号密码即可通过验证。
+403：forbidden 禁止访问，客户端没有权利访问请求内容，服务器拒绝该请求
+404：not found 未找到：服务器找不到所请求的资源。
+502：bad gateway 网关错误：服务器作为网关且从上游服务器获取到了一个无效的 http 响应。</p>
+<h3 id="著名面试题如何实现数组去重">著名面试题：如何实现数组去重？</h3>
+<p><em>假设有数组 array = [1,5,2,3,4,2,3,1,3,4]</em>
+<em>你要写一个函数 unique，使得</em>
+<em>unique(array) 的值为 [1,5,2,3,4]</em>
+<em>也就是把重复的值都去掉，只保留不重复的值。</em>
+<em>要求写出两个答案：</em>
+<em>一个答案不使用 Set 实现（6 分）</em>
+<em>另一个答案使用 Set （4 分）</em>
+<em>（附加分）使用了 Map / WeakMap 以支持对象去重的，额外加 5 分。</em>
+<em>说出每个方案缺点的，再额外每个方案加 2 分。</em></p>
+<p>不使用 set：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">unique</span>(<span style="color:#a6e22e">arr</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">newArr</span> <span style="color:#f92672">=</span> [];
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">newArr</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#f92672">===</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+      <span style="color:#a6e22e">newArr</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]);
+    }
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newArr</span>;
+}
+</code></pre></div><p>创建新数组，遍历 array，如果 newArr 中的第 i 项不存在，则将该项 push 到 newArr 中，否则什么都不做，最后返回 newArr。</p>
+<p>使用 set：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">unique</span>(<span style="color:#a6e22e">arr</span>) {
+  <span style="color:#66d9ef">return</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">arr</span>));
+}
+</code></pre></div><p>这里需要配合 array.from()使用，单纯的使用 set 只会得到一个对象。</p>
+<h3 id="dom-事件什么是事件委托如何阻止默认动作怎么阻止事件冒泡">dom 事件：什么是事件委托？如何阻止默认动作？怎么阻止事件冒泡？</h3>
+<p>事件委托：通过定义新变量，只需要指定一个事件处理，就可以管理同一类型的所有事件。 可以理解为找个中介，委托一个对象监听“我”本应该监听的事件。</p>
+<p>阻止默认动作：使用<code>e.preventDefault()</code>来阻止浏览器默认动作</p>
+<p>阻止冒泡：使用<code>e.stopPropagation()</code>来阻止事件冒泡</p>
+<h3 id="如何理解-js-继承基于原型以及基于-class">如何理解 js 继承？基于原型以及基于 class</h3>
+<p>基于原型：js 对象有一个指向该对象原形的链，在访问该对象的一个属性时，不仅寻找该对象本身的属性，还会搜寻这个对象的原型以及原型的原型直到找到该属性（或者到原型链末尾都找不到）</p>
+<p>基于 class：
+例：通过 class 声明一个类，通过继承这个类来构造一个其他的类，其构造函数构造出的对象同样会拥有最初通过 class 声明的类的属性（注：class 继承基于原型继承）</p>
+<h3 id="数组排序">数组排序</h3>
+<p><em>给出正整数数组 array = [2,1,5,3,8,4,9,5]</em>
+<em>写出一个函数 sort</em>
+<em>使得 sort(array) 得到从小到大排好序的数组 [1,2,3,4,5,5,8,9]</em>
+<em>新的数组可以是在 array 自身上改的，也可以是完全新开辟的内存。</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#960050;background-color:#1e0010">/let sort = arr =&gt;{</span>
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>){
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>
+        }
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pivotIndex</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">pivotIndex</span>,<span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> ; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> ; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">pivot</span>){
+            <span style="color:#a6e22e">left</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>])
+        }<span style="color:#66d9ef">else</span>{
+            <span style="color:#a6e22e">right</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>])
+        }
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">left</span>).<span style="color:#a6e22e">concat</span>( [<span style="color:#a6e22e">pivot</span>],<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">right</span>) )
+}
+</code></pre></div><h3 id="promise用途">promise：用途？</h3>
+<p>用于表示一个异步操作最终完成 (或失败)及其结果值.
+<em>如何创建 new promise？</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newPromise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {});
+</code></pre></div><p><em>如何使用 promise.prototype.then？</em></p>
+<p>使用该方法回返回一个 promise，then 有最多两个参数，分别为 promise 成功和失败的回调</p>
+<p><em>如何使用 promise.all？</em></p>
+<p>该方法返回一个 promise，在 promise.all()的参数中所有 promise 都完成或者参数中没有 promise 时，回调完成（resolve），只要有一个 promise 失败，则回调失败（reject）。</p>
+<p><em>如何使用 promise.race?</em></p>
+<p>该方法返回一个 promise，只要参数中的一个 promise 完成或失败，就采用第一个 promise 的值作为它的值，如果传入多个 promise，则值为其中找到的第一个 promise 值。</p>
+<h3 id="跨域什么是同源跨域jsonp-跨域cors-跨域">跨域：什么是同源、跨域、jsonp 跨域、cors 跨域</h3>
+<p>同源：两个 url 使用的协议，端口和 host 都相同，则两 url 同源。
+跨域：指从一个域名去请求另外一个域名的资源。
+jsonp 跨域：将域名 A 的数据写到一个 js 文件里，在域名 B 中通过 script 标签引用该 js 文件，这个域名通过事先定义好的一个函数，就可以获取到包在 js 文件中的域名 A 的数据了。</p>
+<p>cors 跨域：声明一个响应头，语法为：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">setHeader</span>(<span style="color:#e6db74">&#34;Access-Control-Allow-Origin&#34;</span>, <span style="color:#e6db74">&#34;http://xxxxx:xxxx&#34;</span>);
+</code></pre></div><p>之后“http://xxxxx:xxxx”就可以访问请求这个域名的资源了。</p>
+<h3 id="对前端的理解">对前端的理解</h3>
+<p>学习前端最基础的三个技能：html、css、JavaScript，这三种语言相当于一个页面的骨肉魂，html 是页面的整体框架，css 是页面呈现在用户面前最直观的内容，js 用于设计页面与用户的交互。</p>
+<p>css 实际能做到的效果远比课程讲的多得多，也有很多学问，但是学的时候不能太钻牛角尖。</p>
+<p>css 没有为什么，只有原来如此。</p>
+<p>前端并非网页设计，也不负责服务器相关的技术，有些人认为前端没有难度，是因为他们忽略了前端所要求的知识广度，前端对于知识广度要求相对较高，它位于网页设计及后端的中间位置，需要涉猎多方面的知识才能方便更好的工作，有需要一定的审美水平，又需要会点后台的东西，比如使用 ajax 从后台获取数据等。</p>
+<p>敲代码只是技能的一部分，更加重要的是理清 debug 的思路，否则 bug 会越改越多= =（多用 console.log 大法）</p>
+<p>前端的学习对比后端来说要简单一些，因为学这个相对后端不是那么枯燥，很多东西即学即用，立刻就能看到效果，有助于保持兴趣。</p>
+<p>用户的体验非常的重要，在页面的交互上需要多下功夫。</p>
+<p>前端开发和产品设计师是两种职业，所以没有设计图绝不开工，除非想要 996。</p>
+
+    <h4><a href="https://xxxxxie1997.github.io/">Back to Home</a></h4>
+</div>
+
+
+        </div><footer class="container">
+    <hr class="soften">
+    <p>
+        &copy; 
+        
+            
+        
+        <span id="thisyear">2020</span>
+        
+    </p>
+    <p class="text-center">
+        
+        
+        
+        
+        
+    </p>
+</footer>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap-386.js"></script>
+<script src="/js/bootstrap-transition.js"></script>
+<script src="/js/bootstrap-alert.js"></script>
+<script src="/js/bootstrap-modal.js"></script>
+<script src="/js/bootstrap-dropdown.js"></script>
+<script src="/js/bootstrap-scrollspy.js"></script>
+<script src="/js/bootstrap-tab.js"></script>
+<script src="/js/bootstrap-tooltip.js"></script>
+<script src="/js/bootstrap-popover.js"></script>
+<script src="/js/bootstrap-button.js"></script>
+<script src="/js/bootstrap-collapse.js"></script>
+<script src="/js/bootstrap-carousel.js"></script>
+<script src="/js/bootstrap-typeahead.js"></script>
+<script src="/js/bootstrap-affix.js"></script>
+<script>
+    _386 = { 
+        fastLoad: null ,
+        onePass: null , 
+        speedFactor: null 
+    };
+
+    
+    function ThisYear() {
+        document.getElementById('thisyear').innerHTML = new Date().getFullYear();
+    };
+</script></body>
+</html>

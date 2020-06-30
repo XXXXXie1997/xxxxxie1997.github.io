@@ -6,10 +6,22 @@
     <description>Recent content in Posts on 老咸鱼的水洼</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 01 Jun 2020 22:07:26 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 11:17:28 +0800</lastBuildDate>
     
 	<atom:link href="https://xxxxxie1997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>期中总结</title>
+      <link>https://xxxxxie1997.github.io/post/22th/</link>
+      <pubDate>Tue, 30 Jun 2020 11:17:28 +0800</pubDate>
+      
+      <guid>https://xxxxxie1997.github.io/post/22th/</guid>
+      <description>什么是闭包？用途是？缺点是？ 一个函数在它的作用域之外被引用，就相当于创建了这个函数的闭包,例：
+function func1() { let funcName = &amp;#34;xxx&amp;#34;; function func2() { alert(funcName); } func2(); } func1(); 上述代码中，funcName 是由 func1 函数创建的局部变量，func2 使用了父函数 func1 声明的变量，func2 就是一个闭包。 用途：可以将变量保存在内存中，因为闭包函数执行完后不会被回收。可以实现公有变量以及实现封装 缺点：费内存，滥用会导致网页的性能问题
+call,apply,bind 的用法？ call：使用一个指定的 this 值和单独给出的参数（一个或多个）来调用一个函数。 apply：用法和 call 类似，但 apply 接受的是包含多个参数的数组。 bind：使用 bind 方法可以创建一个新的函数，bind 被调用时，这个新创建函数的 this 会被指定为 bind 的第一个参数，然后其余参数会作为新创建函数的参数供调用时使用
+列举至少 10 个 http 状态码，描述意义 100：continue 继续：这个临时响应用于通知客户端它的部分请求已经被服务器接收且未被拒绝，客户端应该继续发送请求的剩余部分 200：OK 成功，意义根据请求使用的方法不同而不同 201：created 已创建,通常为 put 方法得到的响应码 202：accepted 已创建，表示服务器接受请求但尚未处理 204：no content 无内容，该响应没有响应内容只有响应头。 205：reset content 重置内容，告诉用户代理去重置发送该请求窗口的文档视图 206：partial content 部分内容，客户端通过使用 range 头字段进行文件分段下载时使用的状态码 300：multiple choice 多种选择，一个请求有多重可能的响应，用户必须选择它们中的一个，服务器没有标准可以遵循以代替用户做出选择 301：moved permanently 永久移动，表示请求的 url 资源路径已经永久改变，新的 url 可以再响应的 location 头字段里找到 302：found 临时移动，表示请求的 url 资源路径临时改标并且还可能继续改变，因此客户端在以后方位还得继续使用这个 url，新的 url 可以再响应的 location 头字段里找到 400：bad request 错误请求，发送请求语法错误，服务器无法正常读取。 401：unauthorized 未授权，需要身份验证后才能获取请求内容。只需正确的账号密码即可通过验证。 403：forbidden 禁止访问，客户端没有权利访问请求内容，服务器拒绝该请求 404：not found 未找到：服务器找不到所请求的资源。 502：bad gateway 网关错误：服务器作为网关且从上游服务器获取到了一个无效的 http 响应。</description>
+    </item>
     
     <item>
       <title>一点小成果</title>
